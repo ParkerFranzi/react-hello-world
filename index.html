@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Hello World</title>
+</head>
+<body>
+    <div id="application-root"></div>
+
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+  </script>
+    <script type="text/babel">
+      // Our code will go here
+    function App(props) {
+        console.log(props)
+        return (
+            <div><header>
+            
+      <h1>Sally Student Resume</h1>
+    </header>
+    <main>
+      <h2>Contact Information</h2>
+      <address>
+        <ul>
+          <li>{props.name}</li>
+          <li><a href="mailto:sally@student.com">Email Sally</a></li>
+          <li>1-555-555-5555</li>
+        </ul>
+        <img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" alt="Sally Image" />
+      </address>
+      <section>
+        <h2>Education</h2>
+        <ul>
+          <li>Bellevue College</li>
+          <li>Washington State University</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Employment History</h2>
+        <ul>
+          <li>Google</li>
+          <li>Web Developer</li>
+          <li>Jan 2018 - Present</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam finibus sit amet nunc at consequat. Vivamus at ipsum commodo, eleifend elit a, mattis lectus. Aliquam rutrum purus tempus, convallis odio faucibus, placerat sapien. Phasellus eget condimentum massa. Praesent nunc est, faucibus vitae nunc vitae, tempor lobortis lorem.</li>
+        </ul>
+        <ul>
+          <li>Amazon</li>
+          <li>Web Intern</li>
+          <li>Jan 2016 - Dec 2017</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam finibus sit amet nunc at consequat. Vivamus at ipsum commodo, eleifend elit a, mattis lectus. Aliquam rutrum purus tempus, convallis odio faucibus, placerat sapien. Phasellus eget condimentum massa. Praesent nunc est, faucibus vitae nunc vitae, tempor lobortis lorem.</li>
+        </ul>
+      </section>
+    </main>
+    </div>
+        );
+    }
+
+// Nested elements inside the App
+ReactDOM.render(
+  <App className='my-class'
+    name= 'Sally Student'
+  />,
+  document.querySelector('#application-root')
+);
+    </script>
+</body>
+</html>
